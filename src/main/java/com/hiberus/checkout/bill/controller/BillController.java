@@ -28,7 +28,7 @@ public class BillController {
 
 	@Operation(summary = "Bills the total cost")
 	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<ObjectResponseSuccess<ProductsResponse>> insert(@RequestBody @Valid Products request) {
+	public ResponseEntity<ObjectResponseSuccess<ProductsResponse>> putOrder(@RequestBody @Valid Products request) {
 		Double total = this.billService.putTotal(request);
 		log.debug("Total calculated:" + total);
 		return ResponseEntity.status(HttpStatus.OK)
