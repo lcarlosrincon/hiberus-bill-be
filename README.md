@@ -9,6 +9,6 @@ On your root code execute:
 
 *docker build -t lcarlosrincon/hiberus-bill .*
 
-*docker run -p 8010:8010 lcarlosrincon/hiberus-bill*
+*docker run --name bill -p 8010:8010 lcarlosrincon/hiberus-bill*
 
 On your navigator put: http://localhost:8010/bill
